@@ -1,9 +1,9 @@
 # Bateria-em-JS
 ---
 
-Um site que permite tocar bateria clicando nos intrumentos ou digitando as letras correspondentes.
+Um site feito em HTML, CSS e JS que permite tocar bateria.
 
-Feito em HTML, CSS e Javascript.
+Para verificar o funcionament, basta clicar nos itens da tela ou apertar as teclas correspondentes.
 
 Um exercício do curso: The Complete 2022 Web Development Bootcamp.
 
