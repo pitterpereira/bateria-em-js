@@ -1,4 +1,4 @@
-# Bateria-em-JS 🥁
+# Bateria Online 🥁
 
 Um site simples feito em HTML, CSS e JS que permite tocar bateria.
 
