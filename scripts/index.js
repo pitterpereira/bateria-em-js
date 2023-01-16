@@ -1,3 +1,6 @@
+// ---------------------------------------------------------------
+// VARIÁVEIS GLOBAIS 
+// ---------------------------------------------------------------
 
 // Busca todos os botões da página
 let botoes = document.querySelectorAll(".drum");
@@ -7,6 +10,26 @@ let alerta = document.getElementById('alerta');
 
 // Efeito de fade out no alerta inicial
 alerta.classList.toggle("fadeOut");
+
+// ---------------------------------------------------------------
+// LÓGICA
+// ---------------------------------------------------------------
+
+// Adiciona um listener de cliques para cada um dos botões
+for (var i = 0; i < botoes.length; i++) {
+
+    botoes[i].addEventListener('click', function () {
+
+        tocar(this.innerHTML);
+        animar(this.innerHTML)
+
+        console.log("Letra clicada: " + this.innerHTML);
+        
+})};
+
+// ---------------------------------------------------------------
+// FUNÇÕES 
+// ---------------------------------------------------------------
 
 // Verifica a letra que foi teclada ou clicada
 function tocar(letra){
@@ -46,6 +69,7 @@ function tocar(letra){
             break;
     
         default:
+            animarFundo();
             break;        
     }
     
@@ -64,17 +88,16 @@ function animar(letra){
     }, 100);
 }
 
-// Adiciona um listener de cliques para cada um dos botões
-for (var i = 0; i < botoes.length; i++) {
+// Realça o fundo ao teclar uma letra inválida
+function animarFundo(letra){
 
-    botoes[i].addEventListener('click', function () {
+    document.querySelector("body").classList.add("wrong");
 
-        tocar(this.innerHTML);
-        animar(this.innerHTML)
-
-        console.log("Letra clicada: " + this.innerHTML);
-        
-})};
+    // Seta um tempo para reverter a ação de alteração de classe
+    setTimeout(() => {
+        document.querySelector("body").classList.remove("wrong");
+    }, 100);
+}
 
 // Verifica a letra que foi teclada na página e envia para a função tocar
 addEventListener('keydown', function(event){

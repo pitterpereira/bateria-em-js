@@ -1,12 +1,11 @@
+html {
+  margin: 0;
+}
+
 body {
   text-align: center;
   background-color: #283149;
-}
-
-.fadeOut {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 8000ms, opacity 8000ms;
+  height: 100vh;
 }
 
 a {
@@ -15,7 +14,8 @@ a {
 }
 
 h1 {
-  font-size: 5rem;
+  margin: 3% 0;
+  font-size: 3.5rem;
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
@@ -23,7 +23,7 @@ h1 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
@@ -31,8 +31,19 @@ h3 {
 }
 
 footer {
+  margin: 3%, 0;
   color: #DBEDF3;
   font-family: sans-serif;
+}
+
+/* ----------------------------------------------------------------------- */
+/* CLASSES */
+/* ----------------------------------------------------------------------- */
+
+.fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 8000ms, opacity 8000ms;
 }
 
 .w {
@@ -64,13 +75,17 @@ footer {
 }
 
 .set {
-  margin: 10% 0% 5% 0%;
+  margin: 8% 0% 5% 0%;
   background-color: #DA0463;
 }
 
 .pressed {
   box-shadow: 0 3px 4px 0 #DBEDF3;
   opacity: 0.5;
+}
+
+.wrong {
+  background-color: red;
 }
 
 .red {
