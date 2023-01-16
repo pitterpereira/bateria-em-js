@@ -16,7 +16,7 @@ alerta.classList.toggle("fadeOut");
 // ---------------------------------------------------------------
 
 // Adiciona um listener de cliques para cada um dos botões
-for (var i = 0; i < botoes.length; i++) {
+for (let i = 0; i < botoes.length; i++) {
 
     botoes[i].addEventListener('click', function () {
 
@@ -26,6 +26,15 @@ for (var i = 0; i < botoes.length; i++) {
         console.log("Letra clicada: " + this.innerHTML);
         
 })};
+
+// Verifica a letra que foi teclada na página e envia para a função tocar
+addEventListener('keydown', function(event){
+
+    let letraTeclada = event.key.toLowerCase();
+
+    tocar(letraTeclada);
+    animar(letraTeclada);
+});
 
 // ---------------------------------------------------------------
 // FUNÇÕES 
@@ -98,14 +107,3 @@ function animarFundo(letra){
         document.querySelector("body").classList.remove("wrong");
     }, 100);
 }
-
-// Verifica a letra que foi teclada na página e envia para a função tocar
-addEventListener('keydown', function(event){
-
-    var letraTeclada = event.key.toLowerCase();
-    
-    tocar(letraTeclada);
-    animar(letraTeclada);
-        
-    console.log("Letra teclada: " + event.key);
-});
