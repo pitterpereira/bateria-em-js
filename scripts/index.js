@@ -1,50 +1,56 @@
 
 // Busca todos os botões da página
-var botoes = document.querySelectorAll(".drum");
+let botoes = document.querySelectorAll(".drum");
+
+// Busca pelo item com id alerta
+let alerta = document.getElementById('alerta');
+
+// Efeito de fade out no alerta inicial
+alerta.classList.toggle("fadeOut");
 
 // Verifica a letra que foi teclada ou clicada
 function tocar(letra){
+
+    let partOfDrum;
     
     switch (letra) {
         case 'w': 
-            var tom1 = new Audio("/sounds/tom-1.mp3");
-            tom1.play();
+            partOfDrum = new Audio("/sounds/tom-1.mp3");
             break;
             
         case 'a': 
-            var tom2 = new Audio("/sounds/tom-2.mp3");
-            tom2.play();
+            partOfDrum = new Audio("/sounds/tom-2.mp3");
             break;
         
         case 's': 
-            var tom3 = new Audio("/sounds/tom-3.mp3");
-            tom3.play();
+            partOfDrum = new Audio("/sounds/tom-3.mp3");
             break;
             
         case 'd':  
-            var tom4 = new Audio("/sounds/tom-4.mp3");
-            tom4.play();
+            partOfDrum = new Audio("/sounds/tom-4.mp3");
             break;
         
         case 'j':  
-            var snare = new Audio("/sounds/snare.mp3");
-            snare.play();
+            partOfDrum = new Audio("/sounds/snare.mp3");
             break;
             
         case 'k':  
-            var kick = new Audio("/sounds/kick-bass.mp3");
-            kick.play();
+            partOfDrum = new Audio("/sounds/kick-bass.mp3");
             break;
 
         case 'l':  
-            var crash = new Audio("/sounds/crash.mp3");
-            crash.play();
+            partOfDrum = new Audio("/sounds/crash.mp3");
+            break;
+
+        case 'f5':
             break;
     
         default:
-            console.log("A letra " + letra + " não produz nenhum som");
-            break;
+            break;        
     }
+    
+    // Toca a parte teclada/clicada
+    partOfDrum.play(); 
 }
 
 // Realça o botão selecionado
