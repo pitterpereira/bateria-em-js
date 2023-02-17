@@ -1,10 +1,10 @@
 # Bateria Online 🥁
 
-Um site simples feito em HTML, CSS e JS que permite tocar bateria.
+Um site simples feito em HTML, CSS e JS que permite tocar bateria utilizando cliques ou teclas de atalho.
 
 <br>
 
-![Bateria Online](https://user-images.githubusercontent.com/9722670/219534012-cf9079f8-f599-40a1-8676-d26fc35ff401.gif)
+![Bateria Online](https://user-images.githubusercontent.com/9722670/219534445-398e63fe-95e8-47b8-9c36-1b04019a8062.gif)
 
 <br>
 
