@@ -78,6 +78,7 @@ function tocar(letra){
             break;
     
         default:
+            // Letra inválida
             animarFundo();
             break;        
     }
